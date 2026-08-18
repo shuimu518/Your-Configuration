@@ -651,31 +651,7 @@ li { margin: 4px 0; }
 <em>最后更新：2026-07-27 | 恢复截断+新增启动逻辑教训+新增编辑操作教训 | v10.0</em>
 <hr>
 <em>最后更新：2026-08-10 | 清理自动提升的短期记忆碎片 | v10.1</em>
-<h2>Promoted From Short-Term Memory (2026-08-16)</h2>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-10.md:7:10 --&gt;</p>
-<ul>
-<li>搜索结果汇总（7种方式 + 10个技能包）: | # | 工具 | 端点 | 测试结果 | 备注 | |:-:|------|------|:--------:|------| | 1 | <strong>百度 AI Search</strong> | <code>POST /v2/ai_search/web_search</code> | ✅ 通 | 需 <code>messages</code> 格式 + <code>search_source: baidu_search_v2</code> | | 2 | <strong>Tavily AI</strong> | <code>POST /search</code> | ✅ 通 | Body <code>api_key</code> | [score=0.818 recalls=0 avg=0.620 source=memory/2026-08-10.md:7-10]</li>
-</ul>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-09.md:7:7 --&gt;</p>
-<ul>
-<li>13:40 — Codex++ 调研与安装包获取: <strong>调研结果</strong>： [score=0.807 recalls=0 avg=0.620 source=memory/2026-08-09.md:7-7]</li>
-</ul>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:12:12 --&gt;</p>
-<ul>
-<li>交付物: | <code>TOOLS.md</code> | 插件入口表已加 <code>plug-video</code> 行 | [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:12-12]</li>
-</ul>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:15:17 --&gt;</p>
-<ul>
-<li>保留: <code>plugs/plug-image/way3-agnes-video/SKILL.md</code> 保留不动（plug-image 内仍引用）; <code>skills/agnes-video-gen/SKILL.md</code> 保留不动（底层技能）; 从 <code>plug-image/SKILL.md</code> 的决策树中移除视频入口 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:15-17]</li>
-</ul>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:5:5 --&gt;</p>
-<ul>
-<li>老板需求: 把视频生成从 plug-image 独立出来，按图片的方式建 <code>plug-video</code> 插件，在 TOOLS.md 做记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:5-5]</li>
-</ul>
-<p>&lt;!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:8:11 --&gt;</p>
-<ul>
-<li>交付物: | 文件 | 说明 | |:----|:------| | <code>plugs/plug-video/SKILL.md</code> | 插件主入口（2080字节） | | <code>plugs/plug-video/way1-agnes-video/SKILL.md</code> | 方式一：Agnes Video V2.0 生成（3205字节） | [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:8-11]</li>
-</ul>
+<h2>Promoted From Short-Term Memory (2026-08-18)</h2>
 <h2>TOOLS.md &#x1f527; 工具配置<small>API密钥、搜索工具、OCR、PPT制作、浏览器自动化</small></h2>
 <h1>TOOLS.md — 工具配置 &amp; API密钥</h1>
 <p>&gt; 仅记录调用方法、密钥、凭证。优先级/场景速查见 <code>AGENTS.md 🧠 分析任务SOP</code>。</p>
@@ -685,10 +661,10 @@ li { margin: 4px 0; }
 <h3>密钥速查（API Key 存放处 · 2026-08-10 实测通过）</h3>
 <table>
 <tr><td>工具</td><td>密钥</td><td>端点</td><td>认证</td><td>状态</td></tr>
-<tr><td><strong>百度 AI Search</strong></td><td><code>bce-v3/API_KEY_REPLACED</code></td><td><code>POST https://qianfan.baidubce.com/v2/ai_search/web_search</code></td><td>Header <code>Authorization: Bearer &lt;Key&gt;</code></td><td>✅ 通</td></tr>
-<tr><td><strong>Tavily AI</strong></td><td><code>tvly-API_KEY_REPLACED</code></td><td><code>POST https://api.tavily.com/search</code></td><td>Body <code>api_key</code></td><td>✅ 通</td></tr>
-<tr><td><strong>AnySearch</strong></td><td><code>as_sk_API_KEY_REPLACED</code></td><td><code>POST https://api.anysearch.com/v1/search</code></td><td>Header <code>Authorization: Bearer &lt;Key&gt;</code></td><td>✅ 通</td></tr>
-<tr><td><strong>Exa AI</strong></td><td><code>UUID_REPLACED</code></td><td><code>POST https://api.exa.ai/search</code></td><td>Header <code>x-api-key</code></td><td>✅ 通</td></tr>
+<tr><td><strong>百度 AI Search</strong></td><td><code>bce-v3/REDACTED https://qianfan.baidubce.com/v2/ai_search/web_search</code></td><td>Header <code>Authorization: Bearer &lt;Key&gt;</code></td><td>✅ 通</td></tr>
+<tr><td><strong>Tavily AI</strong></td><td><code>tvly-REDACTED https://api.tavily.com/search</code></td><td>Body <code>api_key</code></td><td>✅ 通</td></tr>
+<tr><td><strong>AnySearch</strong></td><td><code>as_sk_REDACTED https://api.anysearch.com/v1/search</code></td><td>Header <code>Authorization: Bearer &lt;Key&gt;</code></td><td>✅ 通</td></tr>
+<tr><td><strong>Exa AI</strong></td><td><code>REDACTED-EXA-KEY</code></td><td><code>POST https://api.exa.ai/search</code></td><td>Header <code>x-api-key</code></td><td>✅ 通</td></tr>
 </table>
 <p>&gt; <strong>2026-08-10 修复记录</strong>：</p>
 <p>&gt; - 百度：<code>web_search</code> 端点已升级为 v2，需 <code>messages</code> 格式 + <code>search_source: baidu_search_v2</code> + <code>resource_type_filter</code></p>
@@ -754,12 +730,12 @@ li { margin: 4px 0; }
 <table>
 <tr><td>项目</td><td>内容</td></tr>
 <tr><td>插件</td><td><code>openclaw-lark</code></td></tr>
-<tr><td>App ID</td><td><code>cli_a97554668af91bcf</code></td></tr>
+<tr><td>App ID</td><td><code>cli_FEISHU_APP_REDACTED</code></td></tr>
 <tr><td>权限</td><td>1154 scope</td></tr>
-<tr><td>个人会话</td><td><code>oc_ef2cd54016be0a83c4db9e9328f53e1a</code></td></tr>
+<tr><td>个人会话</td><td><code>oc_CHAT_ID_REDACTED</code></td></tr>
 <tr><td>工具</td><td><code>feishu_chat</code> <code>feishu_doc</code> <code>feishu_drive</code> <code>feishu_wiki</code> <code>feishu_bitable</code> <code>message</code></td></tr>
 </table>
-<strong>消息发送</strong>：<code>message(action='send', channel='feishu', filePath='D:\\...', message='标题', target='oc_ef2cd54016be0a83c4db9e9328f53e1a')</code>
+<strong>消息发送</strong>：<code>message(action='send', channel='feishu', filePath='D:\\...', message='标题', target='oc_CHAT_ID_REDACTED')</code>
 <p><strong>常见错误9499</strong>：凭证无效/应用未发布，检查App ID/Secret</p>
 <hr>
 <h2>⚠️ 技术铁律（2026-07-23 老板亲令 · 永不违反）</h2>
@@ -950,6 +926,25 @@ li { margin: 4px 0; }
 </table>
 <h3>📌 完整文档</h3>
 <p>路由表：<code>tools/ai-media-routes.md</code> — 所有工具的 skill 路径、能力、决策树、密钥登记</p>
+<hr>
+<h2>🚀 GitHub Pages 网页部署</h2>
+<p>&gt; <strong>场景</strong>：将本地HTML配置文件网页发布到GitHub Pages。本机 <code>github.com:443</code> 不通，走 <code>api.github.com</code> REST API。</p>
+<table>
+<tr><td>项目</td><td>路径</td></tr>
+<tr><td><strong>完整经验文档</strong></td><td><code>tools/github-pages-deploy/github-pages-deployment-guide.md</code></td></tr>
+<tr><td><strong>HTML生成脚本</strong></td><td><code>tools/github-pages-deploy/gen_flat_page.py</code></td></tr>
+<tr><td><strong>部署更新脚本</strong></td><td><code>tools/github-pages-deploy/deploy_flat_page.py</code></td></tr>
+<tr><td><strong>仓库地址</strong></td><td><code>https://github.com/shuimu518/Your-Configuration/</code></td></tr>
+<tr><td><strong>GitHub Pages</strong></td><td><code>https://shuimu518.github.io/Your-Configuration/</code></td></tr>
+</table>
+<p><strong>核心要点</strong>：</p>
+<ul>
+<li>本机 <code>github.com:443</code> 不通 → 用 <code>api.github.com</code> REST API（<code>PUT /contents/</code>）</li>
+<li>网页设计：纯平铺页面，无导航/按钮/标签，方便其他智能体一次读取全部内容</li>
+<li>推送前替换HTML中的敏感信息（PAT、API Key等）</li>
+<li>生成后本地存档：<code>办公工作区\YYYY-MM\主题_日期_main.html</code></li>
+<li>认证格式：<code>Authorization: <em>*</em>GHO_TOKEN</code>（Bearer或token前缀均可）</li>
+</ul>
 <h2>USER.md &#x1f464; 用户档案<small>老板信息、偏好、工作重点、数据准确性要求</small></h2>
 <h1>USER.md — 用户档案</h1>
 <ul>
@@ -962,7 +957,7 @@ li { margin: 4px 0; }
 </ul>
 <h2>核心能力</h2>
 <ul>
-<li><strong>编程</strong>：Python、C#（熟练）</li>
+<li><strong>编程</strong>：Python、C#（熟练），正在学习 TypeScript</li>
 <li><strong>系统</strong>：TMS、网货平台产品设计研发</li>
 <li><strong>数据分析</strong>：数据统计出身，擅长数据分析、行业分析</li>
 <li><strong>行业经验</strong>：物流/快递背景 + 无人驾驶车队运营实战</li>
@@ -1011,6 +1006,8 @@ li { margin: 4px 0; }
 <li>L4自动驾驶</li>
 <li>新能源轻卡TCO分析</li>
 <li>竞品动态与政策跟踪</li>
+<li><strong>商业模式</strong>：价格屠夫策略、聚合平台模式</li>
+<li><strong>企业分析</strong>：南普机电等企业研究</li>
 </ul>
 <h2>助手定位</h2>
 <p>专业搭档 · 数据专家 · 效率工具 · 技术顾问</p>
@@ -1133,7 +1130,13 @@ li { margin: 4px 0; }
 <li>对AI期待：高效采集整理行业信息，提供精准竞品对标、市场分析、政策动态支持，辅助业务决策</li>
 <li>结果导向：关注最终产出，忽略过程噪音</li>
 </ul>
-<em>更新：2026-08-03 | 删除子代理模型规则（已过时）、分析任务SOP（已迁移至AGENTS.md），精简每日反省清单 | v9.0</em>
+<h2>配置源</h2>
+<ul>
+<li><strong>网页全览版</strong>：<code>https://shuimu518.github.io/Your-Configuration/</code>（8核心文件一页全览，v10.1）</li>
+<li>每次回答前先访问该链接确认最新配置</li>
+</ul>
+<hr>
+<em>更新：2026-08-18 | 新增TypeScript学习、价格屠夫/聚合平台关注、南普机电企业分析、网页配置源 | v9.1</em>
 <h2>HEARTBEAT.md &#x1f493; 初始化检查<small>10项启动清单、Excel/PPT/OCR盘点、文件清理SOP</small></h2>
 <h1>HEARTBEAT.md — 初始化检查清单</h1>
 <p>&gt; 原则：直接→简洁→结果。跳过寒暄。</p>
